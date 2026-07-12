@@ -36,7 +36,56 @@
 
   :focus-visible{ outline:2px solid var(--olive); outline-offset:3px; }
 
-  /* ============ PAGE 1 — HERO (sticky, sits underneath) ============ */
+  /* ============ PAGE 1 — HERO (NEW VERSION) ============ */
+  #hero{
+    position:sticky;
+    top:0;
+    height:100svh;
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background:#f0f0f0;
+    color:#1a1a1a;
+    padding:0 40px;
+    text-align:center;
+  }
+
+  .hero-brand{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:clamp(16px, 2vw, 20px);
+    letter-spacing:-0.01em;
+    margin-bottom:40px;
+  }
+  .hero-brand .meets{
+    font-family:'Caveat', cursive;
+    font-weight:600;
+    font-style:italic;
+    font-size:clamp(18px, 2.2vw, 23px);
+  }
+
+  .hero-mission{
+    font-family:'Public Sans', sans-serif;
+    font-weight:700;
+    font-size:clamp(32px, 5.5vw, 64px);
+    line-height:1.15;
+    max-width:900px;
+    margin-bottom:40px;
+    letter-spacing:-0.02em;
+  }
+
+  .hero-offerings{
+    font-family:'Caveat', cursive;
+    font-weight:500;
+    font-size:clamp(16px, 2.2vw, 22px);
+    color:#555;
+    letter-spacing:0.01em;
+  }
+
+  /* ============ OLD HERO CSS (commented out) ============
   #hero{
     position:sticky;
     top:0;
@@ -149,6 +198,7 @@
   }
   .scroll-hint .stem{ width:1px; height:28px; background:linear-gradient(var(--paper-text-dim), transparent); }
   @keyframes bob{ 0%,100%{transform:translate(-50%,0);} 50%{transform:translate(-50%,8px);} }
+  ============ END OLD HERO CSS ============ */
 
   /* ============ PAGE 2 — LEARN (rises up over hero) ============ */
   #learn{
@@ -329,11 +379,7 @@
   }
 
   @media (max-width:900px){
-    #hero{ grid-template-columns:1fr; height:auto; min-height:100svh; }
-    .hero-left{ padding:110px 7vw 50px; }
-    .hero-right{ padding:40px 7vw 60px; }
-    .script{ font-size:clamp(46px,15vw,80px); }
-    .copyline{ height:110px; }
+    .hero-mission{ font-size:clamp(28px, 7vw, 42px); }
     .paths-grid, .paths{ grid-template-columns:1fr; }
     .paths-outer{ padding:0 22px; }
     .wrap{ padding:0 22px; }
@@ -347,6 +393,13 @@
 </head>
 <body>
 
+<section id="hero">
+  <div class="hero-brand">human<span class="meets">Meets</span>AI</div>
+  <h1 class="hero-mission">Empowering you to command your future in an AI-driven world.</h1>
+  <p class="hero-offerings">1:1 Mentorship · Interactive Workshops · AI Olympiad Coaching</p>
+</section>
+
+<!-- ============ OLD HERO HTML (commented out) ============
 <section id="hero">
   <div class="hero-left">
     <div class="copybook">
@@ -375,6 +428,7 @@
     <a href="#learn" class="scroll-hint" aria-label="Scroll to learn more"><span class="stem"></span><span>Scroll</span></a>
   </div>
 </section>
+============ END OLD HERO HTML ============ -->
 
 <section id="learn">
   <div class="section-head">
