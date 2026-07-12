@@ -83,6 +83,36 @@
     font-size:clamp(16px, 2.2vw, 22px);
     color:#555;
     letter-spacing:0.01em;
+    margin-bottom:32px;
+  }
+  .hero-offerings a{
+    color:#555;
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    transition:color 0.3s ease, border-color 0.3s ease;
+  }
+  .hero-offerings a:hover{
+    color:#1a1a1a;
+    border-bottom-color:#1a1a1a;
+  }
+
+  .hero-cta{
+    font-family:'Public Sans', sans-serif;
+    font-weight:500;
+    font-size:14px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:#1a1a1a;
+    text-decoration:none;
+    padding:12px 28px;
+    border:1.5px solid #1a1a1a;
+    border-radius:30px;
+    transition:background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  .hero-cta:hover{
+    background:#1a1a1a;
+    color:#f0f0f0;
+    transform:translateY(-2px);
   }
 
   /* ============ OLD HERO CSS (commented out) ============
@@ -486,7 +516,8 @@
 <section id="hero">
   <div class="hero-brand">human<span class="meets">Meets</span>AI</div>
   <h1 class="hero-mission">Empowering you to command your future in an AI-driven world.</h1>
-  <p class="hero-offerings">1:1 Mentorship · Interactive Workshops · AI Olympiad Coaching</p>
+  <p class="hero-offerings"><a href="#learn">1:1 Mentorship</a> · <a href="#learn">Interactive Workshops</a> · <a href="#learn">AI Olympiad Coaching</a></p>
+  <a href="#instructor" class="hero-cta">Meet Your Instructor</a>
 </section>
 
 <!-- ============ OLD HERO HTML (commented out) ============
