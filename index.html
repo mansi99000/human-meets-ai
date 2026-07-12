@@ -54,11 +54,14 @@
   }
 
   .hero-brand{
+    position:absolute;
+    top:48px;
+    left:50%;
+    transform:translateX(-50%);
     font-family:'Fraunces', serif;
     font-weight:500;
     font-size:clamp(16px, 2vw, 20px);
     letter-spacing:-0.01em;
-    margin-bottom:40px;
   }
   .hero-brand .meets{
     font-family:'Caveat', cursive;
@@ -210,8 +213,15 @@
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    padding:100px 40px;
+    padding:60px 40px;
     text-align:center;
+  }
+  #instructor .hero-brand{
+    position:absolute;
+    top:48px;
+    left:50%;
+    transform:translateX(-50%);
+    margin-bottom:0;
   }
 
   .instructor-label{
@@ -511,6 +521,7 @@
 ============ END OLD HERO HTML ============ -->
 
 <section id="instructor">
+  <div class="hero-brand">human<span class="meets">Meets</span>AI</div>
   <div class="instructor-label">Meet Your Instructor</div>
   <img src="headshot.png" alt="Mansi Maheshwari" class="instructor-photo">
   <div class="instructor-name">Mansi Maheshwari</div>
